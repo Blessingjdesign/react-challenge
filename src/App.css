@@ -2,37 +2,138 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: rgb(248, 233, 215);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 60px;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
   display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
   flex-direction: column;
+  align-content: center;
+  align-items: stretch;
+  justify-content: center;
+}
+
+button {
+  background-color: #111314;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  margin-bottom: 50px;
+}
+label {
+  margin-right: 30px;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:hover {
+  background-color: #4e4e4e;
+}
+
+input[type="text"] {
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+input[type="number"] {
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  flex-direction: row;
+  align-content: center;
+  align-items: stretch;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.s-button {
+  margin-right: 20px;
+}
+
+.footer,
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: auto !important;
+  margin-bottom: 0 !important;
+  margin-left: 30px !important;
+  margin-top: 0 !important;
+}
+
+@media (max-width: 859px) {
+  body .button-wrap {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
   }
-  to {
-    transform: rotate(360deg);
+
+  label {
+    margin-right: 0;
+  }
+  body form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  body .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
+  }
+
+  body .search-input {
+    margin-left: 0 !important;
+    margin-top: 20px !important;
   }
 }
