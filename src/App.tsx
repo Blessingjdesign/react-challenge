@@ -33,11 +33,20 @@ function App() {
     if (!query) {
       return products;
     }
-    return products.filter(
-      (product) => product.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
-    );
+  
+    const numericQuery = parseFloat(query);
+    return products.filter((product) => {
+      const { id, name, price } = product;
+      const lowerCaseQuery = query.toLowerCase();
+  
+      return (
+        id.toString().indexOf(lowerCaseQuery) !== -1 ||
+        name.toLowerCase().indexOf(lowerCaseQuery) !== -1 ||
+        (typeof numericQuery === "number" && price === numericQuery)
+      );
+    });
   }
-
+  
   return (
     <>
       <Header />
